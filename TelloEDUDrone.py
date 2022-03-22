@@ -1,19 +1,20 @@
 # Started from Tello Template
 # This Python app is in the Public domain
 # Some parts from Tello3.py
-
-import threading, socket, sys, time, subprocess
-
+import threading
+import socket
+import time
+import sys
+import subprocess
 
 # GLOBAL VARIABLES DECLARED HERE....
 host = ''
 port = 9000
-locaddr = (host,port)
+locaddr = (host, port)
 tello_address = ('192.168.10.1', 8889) # Get the Tello drone's address
 
 
-
-# Creates a UDP socketd
+# Creates a UDP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 sock.bind(locaddr)
@@ -44,9 +45,9 @@ recvThread.start()
 # CREATE FUNCTIONS HERE....
 
 
-print("\nFirst & Last Names")
-print("Program Name: ")
-print("Date: ")
+print("\nBenjamin Slachter.")
+print("Program Name: Tack Square.")
+print("Date: 3.22.2022.")
 print("\n****CHECK YOUR TELLO WIFI ADDRESS****")
 print("\n****CHECK SURROUNDING AREA BEFORE FLIGHT****")
 ready = input('\nAre you ready to take flight: ')
