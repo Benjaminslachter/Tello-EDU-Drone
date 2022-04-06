@@ -60,6 +60,7 @@ try:
         sendmsg('takeoff')
         sendmsg('up 30')
         sendmsg('forward 163')
+        sendmsg('go 163 0 40 50')
         sendmsg('land')
 
         print('\nGreat Flight!!!')
