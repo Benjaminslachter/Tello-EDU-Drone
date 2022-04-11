@@ -59,13 +59,15 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        sendmsg('up 30')
+        sendmsg('up 35')
 
         sendmsg('forward 167')
 
-        sendmsg('go 180 0 45 50')
+        sendmsg('go 180 0 55 50')
 
         sendmsg('curve 75 100 0 -35 220 0 50')
+
+        sendmsg('go -180 0 -45 50')
 
         sendmsg('land')
         print('\nGreat Flight!!!')
