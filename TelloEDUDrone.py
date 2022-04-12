@@ -71,6 +71,7 @@ try:
 
         sendmsg('land')
         print('\nGreat Flight!!!')
+#  Won Competition
 
     else:
         print('\nMake sure you check WIFI, surroundings, co-pilot is ready, re-run program\n')
