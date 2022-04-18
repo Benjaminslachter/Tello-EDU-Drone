@@ -35,8 +35,9 @@ def sendmsg(msg, sleep=10):
     msg = msg.encode(encoding="utf-8")
     sock.sendto(msg, tello_address)
     time.sleep(sleep)
-
 # recvThread create
+
+
 recvThread = threading.Thread(target=recv)
 recvThread.start()
 
@@ -56,21 +57,27 @@ try:
     if ready.lower() == 'yes':
         print("\nStarting Drone!\n")
 
+        # Liftoff
         sendmsg('command', 0)
         sendmsg('takeoff')
 
+        # First Hoop
         sendmsg('up 35')
-
         sendmsg('forward 167')
 
+        # Second Hoop
         sendmsg('go 180 0 55 50')
 
+        # Third Hoop
         sendmsg('curve 75 100 0 -35 220 0 50')
 
+        # Forth Hoop
         sendmsg('go -180 0 -45 50')
 
+        # Land(more like controlled drop)
         sendmsg('land')
         print('\nGreat Flight!!!')
+
 #  Won Competition
 
     else:
